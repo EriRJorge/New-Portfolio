@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>404 - Page Not Found | erirjorge.online</title>
+    <link rel="icon" href="favicon.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="styles.css" />
+    <meta name="theme-color" content="#0a0a0a" />
+    <style>
+      body {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        min-height: 100vh;
+        margin: 0;
+        padding: 24px;
+        text-align: center;
+        background: var(--bg);
+        color: var(--text-primary);
+      }
+
+      .error-container {
+        max-width: 600px;
+        width: 100%;
+      }
+
+      .error-code {
+        font-size: 120px;
+        font-weight: 600;
+        color: var(--accent);
+        margin-bottom: 16px;
+        line-height: 1;
+        text-shadow: 0 0 20px rgba(96, 165, 250, 0.3);
+      }
+
+      .error-message {
+        font-size: 24px;
+        color: var(--text-primary);
+        margin-bottom: 8px;
+      }
+
+      .error-description {
+        font-size: 14px;
+        color: var(--text-muted);
+        margin-bottom: 48px;
+        line-height: 1.6;
+      }
+
+      .computer-animation {
+        width: 100%;
+        max-width: 400px;
+        margin: 0 auto 48px;
+        position: relative;
+      }
+
+      .computer-screen {
+        width: 100%;
+        height: 0;
+        padding-bottom: 60%;
+        background: var(--bg-secondary);
+        border: 2px solid var(--border);
+        border-radius: 8px 8px 0 0;
+        position: relative;
+        overflow: hidden;
+        margin: 0 auto;
+      }
+
+      .screen-content {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 80%;
+        text-align: center;
+      }
+
+      .screen-text {
+        font-family: "SF Mono", "Fira Code", "Consolas", monospace;
+        font-size: 12px;
+        color: var(--accent);
+        animation: blink 1s infinite;
+      }
+
+      .computer-base {
+        width: 60%;
+        height: 20px;
+        background: var(--bg-secondary);
+        border: 2px solid var(--border);
+        border-top: none;
+        margin: 0 auto;
+        border-radius: 0 0 4px 4px;
+        position: relative;
+      }
+
+      .power-cable {
+        position: absolute;
+        bottom: -40px;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 8px;
+        height: 60px;
+        background: var(--border);
+        border-radius: 4px;
+        transition: all 0.5s ease;
+      }
+
+      .power-cable::after {
+        content: "";
+        position: absolute;
+        bottom: -20px;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 16px;
+        height: 12px;
+        background: var(--border);
+        border-radius: 2px;
+      }
+
+      .power-cable.unplugged {
+        animation: unplug 2s ease-in-out infinite;
+      }
+
+      @keyframes unplug {
+        0% {
+          transform: translateX(-50%) translateY(0) rotate(0deg);
+          opacity: 1;
+        }
+        50% {
+          transform: translateX(-50%) translateY(30px) rotate(15deg);
+          opacity: 0.7;
+        }
+        100% {
+          transform: translateX(-50%) translateY(60px) rotate(30deg);
+          opacity: 0.3;
+        }
+      }
+
+      .screen-flicker {
+        animation: flicker 0.1s infinite;
+      }
+
+      @keyframes flicker {
+        0%,
+        100% {
+          opacity: 1;
+        }
+        50% {
+          opacity: 0.3;
+        }
+      }
+
+      @keyframes blink {
+        0%,
+        50% {
+          opacity: 1;
+        }
+        51%,
+        100% {
+          opacity: 0.3;
+        }
+      }
+
+      .home-button {
+        display: inline-block;
+        padding: 12px 24px;
+        background: var(--bg-secondary);
+        border: 1px solid var(--border);
+        border-radius: 4px;
+        color: var(--accent);
+        text-decoration: none;
+        font-size: 14px;
+        transition: all 0.3s ease;
+        margin-top: 24px;
+      }
+
+      .home-button:hover {
+        border-color: var(--accent);
+        background: var(--bg);
+        transform: translateY(-2px);
+      }
+
+      .sparks {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        pointer-events: none;
+      }
+
+      .spark {
+        position: absolute;
+        width: 4px;
+        height: 4px;
+        background: var(--accent);
+        border-radius: 50%;
+        animation: spark 1s ease-out infinite;
+        opacity: 0;
+      }
+
+      @keyframes spark {
+        0% {
+          opacity: 1;
+          transform: translate(0, 0) scale(1);
+        }
+        100% {
+          opacity: 0;
+          transform: translate(var(--spark-x, 20px), var(--spark-y, -20px))
+            scale(0);
+        }
+      }
+
+      .spark:nth-child(1) {
+        --spark-x: 30px;
+        --spark-y: -30px;
+        left: 45%;
+        top: 50%;
+        animation-delay: 0s;
+      }
+
+      .spark:nth-child(2) {
+        --spark-x: -25px;
+        --spark-y: -25px;
+        left: 55%;
+        top: 50%;
+        animation-delay: 0.2s;
+      }
+
+      .spark:nth-child(3) {
+        --spark-x: 20px;
+        --spark-y: 30px;
+        left: 50%;
+        top: 50%;
+        animation-delay: 0.4s;
+      }
+
+      @media (max-width: 768px) {
+        .error-code {
+          font-size: 80px;
+        }
+
+        .error-message {
+          font-size: 20px;
+        }
+
+        .computer-animation {
+          max-width: 300px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="error-container">
+      <div class="error-code">404</div>
+      <h1 class="error-message">Page Not Found</h1>
+      <p class="error-description">
+        Looks like this page got disconnected. The file you're looking for
+        doesn't exist or has been moved.
+      </p>
+
+    <script>
+      // Add screen flicker effect when cable is unplugged
+      const screen = document.getElementById("screen");
+      const cable = document.getElementById("cable");
+
+      // Start flickering after a delay
+      setTimeout(() => {
+        screen.classList.add("screen-flicker");
+      }, 1000);
+
+      // Stop flickering and turn off screen
+      setTimeout(() => {
+        screen.classList.remove("screen-flicker");
+        screen.style.opacity = "0.1";
+      }, 2000);
+
+      // Reset animation loop
+      setInterval(() => {
+        screen.style.opacity = "1";
+        screen.classList.remove("screen-flicker");
+        setTimeout(() => {
+          screen.classList.add("screen-flicker");
+        }, 1000);
+        setTimeout(() => {
+          screen.classList.remove("screen-flicker");
+          screen.style.opacity = "0.1";
+        }, 2000);
+      }, 4000);
+    </script>
+  </body>
+</html>

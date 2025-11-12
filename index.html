@@ -3,20 +3,126 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Primary SEO Meta Tags -->
+    <title>
+      Eri R Jorge - Web Developer & Computer Science Student | Portfolio
+    </title>
+    <meta
+      name="title"
+      content="Eri R Jorge - Web Developer & Computer Science Student | Portfolio"
+    />
+    <meta
+      name="description"
+      content="Eri R Jorge is a Computer Science student at Southern Adventist University with 3+ years of freelance web development experience. Specializing in frontend development, React, JavaScript, WordPress, and SEO optimization. View portfolio, projects, and contact information."
+    />
+    <meta
+      name="keywords"
+      content="Eri R Jorge, Eri Jorge, Eri R. Jorge, web developer, computer science student, Southern Adventist University, freelance developer, React developer, JavaScript developer, WordPress developer, SEO specialist, frontend developer, portfolio, web development, Boca Raton, Florida"
+    />
+    <meta name="author" content="Eri R Jorge" />
+    <meta name="robots" content="index, follow" />
+    <meta name="language" content="English" />
+    <meta name="revisit-after" content="7 days" />
+
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://erirjorge.online/" />
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://erirjorge.online/" />
+    <meta
+      property="og:title"
+      content="Eri R Jorge - Web Developer & Computer Science Student"
+    />
+    <meta
+      property="og:description"
+      content="Computer Science student at Southern Adventist University with 3+ years of freelance web development experience. Specializing in frontend development, React, JavaScript, WordPress, and SEO optimization."
+    />
+    <meta property="og:site_name" content="Eri R Jorge Portfolio" />
+    <meta property="og:locale" content="en_US" />
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:url" content="https://erirjorge.online/" />
+    <meta
+      name="twitter:title"
+      content="Eri R Jorge - Web Developer & Computer Science Student"
+    />
+    <meta
+      name="twitter:description"
+      content="Computer Science student with 3+ years of freelance web development experience. Specializing in frontend development, React, JavaScript, WordPress, and SEO optimization."
+    />
+    <meta name="twitter:creator" content="@EriJorge1" />
+
+    <!-- Favicons -->
     <link rel="icon" href="favicon.ico" type="image/x-icon" />
     <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png" />
     <link rel="manifest" href="site.webmanifest" />
     <link rel="stylesheet" href="styles.css" />
     <meta name="theme-color" content="#0a0a0a" />
-    <title>erirjorge.online</title>
+
+    <!-- JSON-LD Structured Data -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Eri R Jorge",
+        "alternateName": "Eri Jorge",
+        "url": "https://erirjorge.online",
+        "image": "https://erirjorge.online/android-chrome-512x512.png",
+        "sameAs": [
+          "https://www.linkedin.com/in/eri-r-jorge-a079b4221/",
+          "https://github.com/EriRJorge",
+          "https://www.youtube.com/@ProjectEri",
+          "https://www.instagram.com/tachi_bana.exe/",
+          "https://x.com/EriJorge1",
+          "https://discord.gg/VHc3r8nr9B"
+        ],
+        "jobTitle": "Web Developer",
+        "worksFor": {
+          "@type": "Organization",
+          "name": "The Accent"
+        },
+        "alumniOf": {
+          "@type": "EducationalOrganization",
+          "name": "Southern Adventist University"
+        },
+        "knowsAbout": [
+          "Web Development",
+          "Frontend Development",
+          "React",
+          "JavaScript",
+          "WordPress",
+          "SEO Optimization",
+          "HTML",
+          "CSS",
+          "PHP",
+          "TypeScript",
+          "Node.js"
+        ],
+        "email": "EriRJorge@gmail.com",
+        "telephone": "+15612986075",
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Boca Raton",
+          "addressRegion": "FL",
+          "addressCountry": "US"
+        },
+        "description": "Computer Science student at Southern Adventist University with 3+ years of freelance web development experience. Specializing in frontend development, React, JavaScript, WordPress, and SEO optimization."
+      }
+    </script>
   </head>
   <body>
     <header>
       <div class="container">
         <div class="header-content">
-          <div class="logo">~/<span>erirjorge</span></div>
+          <div class="logo" itemscope itemtype="https://schema.org/Person">
+            ~/<span itemprop="name">erirjorge</span>
+          </div>
           <nav>
             <ul>
+              <li><a href="resume.html">resume</a></li>
               <li><a href="#work">work</a></li>
               <li><a href="#skills">skills</a></li>
               <li><a href="#qualifications">qualifications</a></li>
@@ -32,7 +138,7 @@
     <main>
       <div class="container">
         <section class="intro">
-          <h1 style="color: var(--accent)">Greetings!</h1>
+          <h1 class="accent-color">Greetings!</h1>
           <p>
             I'm <span class="highlight-text">Eri R. Jorge</span>, a junior
             <span class="highlight-text">Computer Science</span> major at
@@ -259,6 +365,9 @@
           </div>
 
           <ul class="link-list">
+            <li>
+              <a href="resume.html">View Full Resume</a>
+            </li>
             <li>
               <a href="https://github.com/EriRJorge">View GitHub profile</a>
             </li>
@@ -647,9 +756,7 @@
             </p>
           </div>
 
-          <p
-            style="color: var(--text-muted); font-size: 13px; margin-top: 24px"
-          >
+          <p class="text-muted-small-mt">
             Additional: I have Completed Advanced Web Programming a Level 400
             Course, a Root Problem Solving and Analysis Program, a Basic Cisco
             Networking Certification in Homes and Small Business. Also is Fluent
@@ -870,18 +977,15 @@
 
         <section id="contact">
           <h2 class="fade-in-left">Get in touch</h2>
-          <p
-            style="
-              color: var(--text-muted);
-              margin-bottom: 24px;
-              font-size: 13px;
-            "
-          >
+          <p class="text-muted-small-mb">
             I'm currently looking for new opportunities and interesting
             projects. Whether you have a freelance project, full-time position,
             or just want to connect, feel free to reach out!
           </p>
           <ul class="link-list">
+            <li>
+              <a href="resume.html">View Resume & LinkedIn</a>
+            </li>
             <li>
               <a href="mailto:EriRJorge@gmail.com">EriRJorge@gmail.com</a>
             </li>
@@ -895,14 +999,27 @@
     <footer>
       <div class="container">
         <div class="footer-content">
-          <div class="copyright">© 2025 Eri R. Jorge • Boca Raton, FL</div>
+          <div class="copyright">
+            <address>
+              © 2025 <strong>Eri R. Jorge</strong> •
+              <span itemprop="addressLocality">Boca Raton</span>,
+              <span itemprop="addressRegion">FL</span>
+            </address>
+          </div>
           <div class="footer-links">
-            <a href="https://github.com/EriRJorge">github</a>
-            <a href="https://www.youtube.com/@ProjectEri">youtube</a>
-            <a href="https://www.instagram.com/tachi_bana.exe/">instagram</a>
-            <a href="https://x.com/EriJorge1">x/twitter</a>
-            <a href="https://discord.gg/VHc3r8nr9B">discord</a>
-            <a href="mailto:EriRJorge@gmail.com">email</a>
+            <a
+              href="https://www.linkedin.com/in/eri-r-jorge-a079b4221/"
+              rel="me"
+              >linkedin</a
+            >
+            <a href="https://github.com/EriRJorge" rel="me">github</a>
+            <a href="https://www.youtube.com/@ProjectEri" rel="me">youtube</a>
+            <a href="https://www.instagram.com/tachi_bana.exe/" rel="me"
+              >instagram</a
+            >
+            <a href="https://x.com/EriJorge1" rel="me">x/twitter</a>
+            <a href="https://discord.gg/VHc3r8nr9B" rel="me">discord</a>
+            <a href="mailto:EriRJorge@gmail.com" rel="me">email</a>
           </div>
         </div>
       </div>
